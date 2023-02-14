@@ -1,0 +1,40 @@
+<html>
+    <head>
+<h1>This is header text</h1>
+
+    </head>
+    <body>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="./Scripts/fetchAPI.js"></script>
+        <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> 
+        
+        <div id = "container">
+            <form action="/action_page.php">
+                <label for="sortlist">SortList</label>
+                <input type="text" id="slist" name="slist"><br><br>
+                <input type="button" id="btn" value="submit">
+                <script>btn.addEventListener('click',fetchAPI(document.getElementById('slist').value));</script>
+                <script>slist.addEventListener('keypress',function(event) {
+                            if (event.key == "Enter") {
+                                event.preventDefault();
+                                fetchAPI(document.getElementById('slist').value);
+                            }
+                });
+
+                
+                
+                
+                </script>
+            </form>
+            
+           
+        </div> 
+        <p id = "p1"></p>
+        <p id = "p2"></p>
+       
+
+    </body>
+  
+  
+
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+<h1>This is header text</h1>
+
+    </head>
+    <body>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="./scripts/script.js"></script>
+        <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> 
+        <form action="/action_page.php">
+            <label for="word">Word:</label>
+            <input type="text" id="word" name="word"><br><br>
+            <input type="button" id="btn" value="submit">
+            <script>btn.addEventListener('click',fetchAPI);</script>
+        </form>
+         
+        <p id = "p1"></p>
+       
+
+    </body>
+  
+  
+
+</html>

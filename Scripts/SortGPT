@@ -1,0 +1,33 @@
+function sortList() {
+    const inputString = document.getElementById('slist').value; 
+    const inputArray = inputString.split(",");
+    document.getElementById('p1').textContent = inputArray;
+
+    let swapCount = 0;
+    let isSorted = false;
+
+    while (!isSorted) {
+        isSorted = true;
+        inputArray.forEach((currentValue, index) => {
+            if (currentValue > inputArray[index + 1]) {
+                swapElements(index);
+                swapCount++;
+                isSorted = false;
+            }
+        });
+    }
+
+    let container = document.getElementById('container');
+    let node = document.createTextNode(inputArray + " swaps = " + swapCount);
+    let br = document.createElement("br");
+    container.appendChild(node); 
+    container.appendChild(br);
+
+
+function swapElements(index) {
+    [inputArray[index], inputArray[index + 1]] = [inputArray[index + 1], inputArray[index]];
+}
+}
+
+
+
